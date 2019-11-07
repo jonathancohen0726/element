@@ -332,6 +332,9 @@
     },
 
     watch: {
+      query(val) {
+        this.$emit('query-change', val);
+      },
       selectDisabled() {
         this.$nextTick(() => {
           this.resetInputHeight();
